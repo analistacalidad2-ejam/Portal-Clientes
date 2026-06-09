@@ -9,9 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* ═══════════════════════════════════════════════════
-   TOKENS & VARIABLES
-═══════════════════════════════════════════════════ */
+
 :root {
   --navy:         #060f1e;
   --navy-mid:     #0b1a33;
@@ -66,7 +64,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ambient background layers */
+
 body::before {
   content: '';
   position: fixed; inset: 0; pointer-events: none; z-index: 0;
@@ -76,7 +74,7 @@ body::before {
     radial-gradient(ellipse 45% 40% at 50% 105%, rgba(37,99,235,.045) 0%, transparent 60%);
 }
 
-/* Subtle noise texture */
+
 body::after {
   content: '';
   position: fixed; inset: 0; pointer-events: none; z-index: 1;
@@ -90,9 +88,7 @@ body::after {
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.08); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.14); }
 
-/* ═══════════════════════════════════════════════════
-   LOGIN SCREEN
-═══════════════════════════════════════════════════ */
+
 #loginScreen {
   position: fixed; inset: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: center;
@@ -151,7 +147,7 @@ body::after {
   letter-spacing: .1px;
 }
 
-/* Login form fields */
+
 .l-group { margin-bottom: 13px; }
 .l-label {
   display: block; font-size: .58rem; font-weight: 700;
@@ -193,7 +189,7 @@ body::after {
 }
 .l-eye:hover { color: var(--blue-glow); }
 
-/* CAPTCHA */
+
 .captcha-wrap {
   background: rgba(255,255,255,.02);
   border: 1px solid var(--border);
@@ -316,12 +312,10 @@ body::after {
   font-size: .58rem; color: var(--dim); letter-spacing: .3px;
 }
 
-/* ═══════════════════════════════════════════════════
-   PORTAL LAYOUT
-═══════════════════════════════════════════════════ */
+
 #portalScreen { display: none; min-height: 100vh; position: relative; z-index: 1; }
 
-/* Sidebar */
+
 .sidebar {
   position: fixed; top: 0; left: 0; bottom: 0;
   width: var(--sidebar-w);
@@ -333,7 +327,7 @@ body::after {
   transition: transform .3s var(--ease);
 }
 
-/* Gold accent line */
+
 .sidebar::after {
   content: '';
   position: absolute; top: 0; right: -1px; bottom: 0; width: 1px;
@@ -442,7 +436,7 @@ body::after {
 }
 .nav-item.nav-logout:hover .nav-icon { color: #f87171; }
 
-/* Sidebar overlay (mobile) */
+
 .sidebar-overlay {
   display: none; position: fixed; inset: 0;
   background: rgba(6,15,30,.8); z-index: 299;
@@ -450,7 +444,7 @@ body::after {
 }
 .sidebar-overlay.show { display: block; }
 
-/* Main area */
+
 .portal-main {
   margin-left: var(--sidebar-w);
   display: flex; flex-direction: column;
@@ -459,7 +453,7 @@ body::after {
 }
 .portal-main.full { margin-left: 0; }
 
-/* Topbar */
+
 .topbar {
   position: sticky; top: 0; z-index: 200;
   height: var(--topbar-h);
@@ -527,7 +521,7 @@ body::after {
 }
 .topbar-user-name { font-size: .72rem; font-weight: 500; color: rgba(255,255,255,.72); }
 
-/* Notification panel */
+
 .notif-panel {
   position: absolute; top: 44px; right: 0; width: 290px;
   background: var(--navy-card);
@@ -573,12 +567,10 @@ body::after {
 .notif-item-title { font-size: .67rem; font-weight: 500; color: rgba(255,255,255,.72); margin-bottom: 1px; }
 .notif-item-time { font-size: .56rem; color: var(--dim); }
 
-/* Content area */
+
 .content-area { flex: 1; padding: 28px 26px; }
 
-/* ═══════════════════════════════════════════════════
-   MODULE SYSTEM
-═══════════════════════════════════════════════════ */
+
 .module { display: none; animation: modIn .3s var(--ease) forwards; }
 .module.active { display: block; }
 @keyframes modIn {
@@ -586,7 +578,7 @@ body::after {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Page header */
+
 .page-header { margin-bottom: 24px; }
 .page-eyebrow {
   font-size: .56rem; font-weight: 700; letter-spacing: 2.2px;
@@ -606,7 +598,7 @@ body::after {
 .page-title em { font-style: italic; color: var(--gold-light); }
 .page-sub { font-size: .74rem; color: var(--muted); font-weight: 300; line-height: 1.6; }
 
-/* Section label */
+
 .section-label {
   font-size: .56rem; font-weight: 700; letter-spacing: 2px;
   text-transform: uppercase; color: rgba(255,255,255,.3);
@@ -617,9 +609,7 @@ body::after {
   background: linear-gradient(90deg, var(--border), transparent);
 }
 
-/* ═══════════════════════════════════════════════════
-   CARDS & SURFACES
-═══════════════════════════════════════════════════ */
+
 .card {
   background: linear-gradient(160deg, rgba(13,29,59,.75) 0%, rgba(11,26,51,.65) 100%);
   border: 1px solid var(--border);
@@ -628,7 +618,7 @@ body::after {
   box-shadow: var(--shadow-card);
 }
 
-/* Stats grid */
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
@@ -680,9 +670,7 @@ body::after {
 .stat-label { font-size: .62rem; color: var(--muted); font-weight: 400; }
 .stat-hint  { font-size: .58rem; color: var(--dim); margin-top: 2px; }
 
-/* ═══════════════════════════════════════════════════
-   QUICK ACTIONS — Rediseño premium
-═══════════════════════════════════════════════════ */
+
 .qa-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
@@ -735,9 +723,7 @@ body::after {
 }
 .qa-card:hover .qa-label { color: rgba(255,255,255,.82); }
 
-/* ═══════════════════════════════════════════════════
-   CASE CARDS
-═══════════════════════════════════════════════════ */
+
 .case-grid { display: grid; gap: 10px; }
 .case-card {
   background: linear-gradient(155deg, rgba(13,29,59,.75) 0%, rgba(11,26,51,.65) 100%);
@@ -799,7 +785,7 @@ body::after {
 
 .case-footer { display: flex; gap: 6px; }
 
-/* Status badges */
+
 .badge {
   display: inline-flex; align-items: center; gap: 3px;
   padding: 3px 9px; border-radius: 100px;
@@ -813,9 +799,7 @@ body::after {
 .badge.closed   { background: rgba(255,255,255,.04); border: 1px solid var(--border);         color: var(--muted); }
 .badge.mora     { background: rgba(239,68,68,.09);   border: 1px solid rgba(239,68,68,.2);   color: #f87171; }
 
-/* ═══════════════════════════════════════════════════
-   BUTTONS
-═══════════════════════════════════════════════════ */
+
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   padding: 8px 15px;
@@ -861,9 +845,7 @@ body::after {
 .btn-sm  { padding: 5px 11px; font-size: .63rem; }
 .btn-lg  { padding: 13px 22px; font-size: .78rem; letter-spacing: .7px; }
 
-/* ═══════════════════════════════════════════════════
-   FORMS
-═══════════════════════════════════════════════════ */
+
 .form-card {
   background: linear-gradient(155deg, rgba(13,29,59,.75) 0%, rgba(11,26,51,.65) 100%);
   border: 1px solid var(--border);
@@ -916,7 +898,7 @@ body::after {
 .f-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .f-hint { font-size: .6rem; color: var(--dim); margin-top: 4px; line-height: 1.5; }
 
-/* Upload */
+
 .upload-zone {
   border: 1.5px dashed rgba(255,255,255,.07);
   border-radius: var(--r-md); padding: 20px;
@@ -949,9 +931,7 @@ body::after {
 }
 .file-remove:hover { color: #f87171; }
 
-/* ═══════════════════════════════════════════════════
-   TABLE
-═══════════════════════════════════════════════════ */
+
 .table-wrap {
   background: linear-gradient(155deg, rgba(13,29,59,.75) 0%, rgba(11,26,51,.65) 100%);
   border: 1px solid var(--border);
@@ -998,9 +978,7 @@ td strong { color: var(--white); font-weight: 500; }
   font-weight: 600; color: var(--gold-light); letter-spacing: .7px;
 }
 
-/* ═══════════════════════════════════════════════════
-   COMMUNICATIONS
-═══════════════════════════════════════════════════ */
+
 .comm-grid { display: flex; flex-direction: column; gap: 8px; }
 .comm-card {
   background: linear-gradient(155deg, rgba(13,29,59,.75) 0%, rgba(11,26,51,.65) 100%);
@@ -1035,9 +1013,7 @@ td strong { color: var(--white); font-weight: 500; }
 .comm-tag.alert  { background: rgba(245,158,11,.09);  color: #fbbf24; }
 .comm-tag.update { background: rgba(16,185,129,.07);  color: #34d399; }
 
-/* ═══════════════════════════════════════════════════
-   CALENDAR
-═══════════════════════════════════════════════════ */
+
 .cal-wrap {
   background: linear-gradient(155deg, rgba(13,29,59,.75) 0%, rgba(11,26,51,.65) 100%);
   border: 1px solid var(--border);
@@ -1096,9 +1072,7 @@ td strong { color: var(--white); font-weight: 500; }
 .cal-leg-item { display: flex; align-items: center; gap: 5px; font-size: .59rem; color: var(--muted); }
 .cal-leg-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 
-/* ═══════════════════════════════════════════════════
-   PROFILE
-═══════════════════════════════════════════════════ */
+
 .profile-card {
   background: linear-gradient(155deg, rgba(13,29,59,.75) 0%, rgba(11,26,51,.65) 100%);
   border: 1px solid var(--border);
@@ -1160,9 +1134,7 @@ td strong { color: var(--white); font-weight: 500; }
 .lawyer-name { font-family: var(--serif); font-size: .85rem; font-weight: 600; color: var(--white); }
 .lawyer-role { font-size: .6rem; color: var(--gold-light); margin-top: 1px; }
 
-/* ═══════════════════════════════════════════════════
-   HONORARIOS — Solo estado
-═══════════════════════════════════════════════════ */
+
 .fee-status-card {
   background: linear-gradient(155deg, rgba(13,29,59,.75) 0%, rgba(11,26,51,.65) 100%);
   border: 1px solid var(--border);
@@ -1194,7 +1166,7 @@ td strong { color: var(--white); font-weight: 500; }
 .fee-quota-value { font-family: var(--serif); font-size: 1.45rem; font-weight: 700; color: var(--white); line-height: 1; }
 .fee-quota-hint  { font-size: .6rem; color: var(--muted); margin-top: 3px; }
 
-/* Invoices table — sin montos */
+
 .inv-row-concept { font-size: .72rem; color: rgba(255,255,255,.65); }
 .inv-action-link {
   font-size: .65rem; color: var(--blue-glow);
@@ -1203,9 +1175,7 @@ td strong { color: var(--white); font-weight: 500; }
 }
 .inv-action-link:hover { color: var(--blue); text-decoration-color: var(--blue-glow); }
 
-/* ═══════════════════════════════════════════════════
-   TICKET DETAIL / MESSAGES
-═══════════════════════════════════════════════════ */
+
 .ticket-msgs { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; max-height: 280px; overflow-y: auto; }
 .ticket-msg {
   background: rgba(255,255,255,.022);
@@ -1226,9 +1196,7 @@ td strong { color: var(--white); font-weight: 500; }
 .comment-row { display: flex; gap: 6px; }
 .comment-row .f-input { flex: 1; padding: 9px 12px; }
 
-/* ═══════════════════════════════════════════════════
-   ACTIVITY TIMELINE
-═══════════════════════════════════════════════════ */
+
 .activity-list { display: flex; flex-direction: column; }
 .activity-item { display: flex; align-items: flex-start; gap: 11px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.025); }
 .activity-item:last-child { border-bottom: none; }
@@ -1240,9 +1208,7 @@ td strong { color: var(--white); font-weight: 500; }
 .activity-text strong { color: var(--white); font-weight: 500; }
 .activity-time { font-size: .59rem; color: var(--dim); margin-top: 2px; }
 
-/* ═══════════════════════════════════════════════════
-   MODAL
-═══════════════════════════════════════════════════ */
+
 .modal-overlay {
   position: fixed; inset: 0;
   background: rgba(5,12,26,.92); z-index: 1000;
@@ -1282,9 +1248,7 @@ td strong { color: var(--white); font-weight: 500; }
 .modal-body   { padding: 20px 24px; }
 .modal-footer { padding: 10px 24px 20px; display: flex; gap: 6px; justify-content: flex-end; }
 
-/* ═══════════════════════════════════════════════════
-   TOAST
-═══════════════════════════════════════════════════ */
+
 .toast-container {
   position: fixed; bottom: 20px; right: 20px; z-index: 2000;
   display: flex; flex-direction: column; gap: 6px; pointer-events: none;
@@ -1315,9 +1279,7 @@ td strong { color: var(--white); font-weight: 500; }
 .toast.warning .toast-bar  { background: var(--warning); }
 .toast.warning .toast-icon { background: rgba(245,158,11,.08); color: #fbbf24; }
 
-/* ═══════════════════════════════════════════════════
-   TUTORIAL / HELP TOOLTIP
-═══════════════════════════════════════════════════ */
+
 .help-panel {
   background: var(--navy-card);
   border: 1px solid rgba(201,168,76,.18);
@@ -1350,23 +1312,17 @@ td strong { color: var(--white); font-weight: 500; }
 }
 .help-step-text { font-size: .72rem; color: var(--muted); line-height: 1.55; }
 
-/* ═══════════════════════════════════════════════════
-   EMPTY STATES
-═══════════════════════════════════════════════════ */
+
 .empty-state { text-align: center; padding: 40px 20px; }
 .empty-icon { font-size: 2rem; color: var(--dim); margin-bottom: 12px; }
 .empty-title { font-family: var(--serif); font-size: .92rem; color: rgba(255,255,255,.38); margin-bottom: 5px; }
 .empty-sub { font-size: .7rem; color: var(--dim); line-height: 1.6; max-width: 360px; margin: 0 auto 14px; }
 
-/* ═══════════════════════════════════════════════════
-   TWO-COLUMN LAYOUT
-═══════════════════════════════════════════════════ */
+
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
 
-/* ═══════════════════════════════════════════════════
-   INICIO — Welcome banner
-═══════════════════════════════════════════════════ */
+
 .welcome-banner {
   background: linear-gradient(135deg, rgba(13,29,59,.9) 0%, rgba(21,40,72,.7) 60%, rgba(37,99,235,.08) 100%);
   border: 1px solid var(--border);
@@ -1395,9 +1351,7 @@ td strong { color: var(--white); font-weight: 500; }
 .welcome-seal-icon { font-size: 1.4rem; color: var(--gold); }
 .welcome-seal-text { font-size: .44rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-light); }
 
-/* ═══════════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════════ */
+
 @media (max-width: 1024px) {
   .three-col { grid-template-columns: 1fr 1fr; }
 }
@@ -1431,9 +1385,7 @@ td strong { color: var(--white); font-weight: 500; }
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════
-     LOGIN SCREEN
-═══════════════════════════════════════════════════ -->
+
 <div id="loginScreen">
   <div class="login-ambient"></div>
   <div class="login-box">
@@ -1462,7 +1414,7 @@ td strong { color: var(--white); font-weight: 500; }
       </div>
     </div>
 
-    <!-- CAPTCHA simulado -->
+   
     <div class="captcha-wrap" id="captchaWrap" onclick="doCaptcha()">
       <div class="captcha-check" id="captchaCheck">
         <i class="fas fa-check captcha-check-icon" id="captchaIcon"></i>
@@ -1502,9 +1454,7 @@ td strong { color: var(--white); font-weight: 500; }
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════
-     PORTAL
-═══════════════════════════════════════════════════ -->
+
 <div id="portalScreen">
   <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMobileSidebar()"></div>
 
@@ -1571,7 +1521,7 @@ td strong { color: var(--white); font-weight: 500; }
 
   <main class="portal-main" id="portalMain">
 
-    <!-- TOPBAR -->
+    
     <header class="topbar">
       <button class="topbar-toggle" id="sidebarToggle" onclick="toggleSidebar()" title="Menú">
         <i class="fas fa-bars-staggered"></i>
@@ -1619,10 +1569,10 @@ td strong { color: var(--white); font-weight: 500; }
       </div>
     </header>
 
-    <!-- CONTENT -->
+   
     <div class="content-area">
 
-      <!-- ━━━ INICIO ━━━ -->
+     
       <div class="module active" id="mod-inicio">
         <div class="welcome-banner">
           <div class="welcome-banner-inner">
@@ -1694,7 +1644,7 @@ td strong { color: var(--white); font-weight: 500; }
         </div>
       </div>
 
-      <!-- ━━━ MIS CAUSAS ━━━ -->
+     
       <div class="module" id="mod-casos">
         <div class="page-header">
           <div class="page-eyebrow"><i class="fas fa-scale-balanced"></i> Causas activas</div>
@@ -1704,7 +1654,7 @@ td strong { color: var(--white); font-weight: 500; }
         <div class="case-grid" id="caseGrid"></div>
       </div>
 
-      <!-- ━━━ NUEVA CONSULTA ━━━ -->
+    
       <div class="module" id="mod-nuevo-ticket">
         <div class="page-header">
           <div class="page-eyebrow"><i class="far fa-pen-to-square"></i> Consultas</div>
@@ -1712,7 +1662,7 @@ td strong { color: var(--white); font-weight: 500; }
           <p class="page-sub">Envíe su consulta de forma segura. Su abogado responderá en el plazo establecido por el estudio.</p>
         </div>
 
-        <!-- Tutorial help panel -->
+       
         <div class="help-panel" id="ticketHelpPanel">
           <div class="help-panel-header">
             <i class="far fa-lightbulb help-panel-icon"></i>
@@ -1820,7 +1770,7 @@ td strong { color: var(--white); font-weight: 500; }
         </div>
       </div>
 
-      <!-- ━━━ MIS CONSULTAS (TICKETS) ━━━ -->
+    
       <div class="module" id="mod-tickets">
         <div class="page-header">
           <div class="page-eyebrow"><i class="far fa-comments"></i> Historial</div>
@@ -1856,7 +1806,7 @@ td strong { color: var(--white); font-weight: 500; }
         </div>
       </div>
 
-      <!-- ━━━ COMUNICADOS ━━━ -->
+     
       <div class="module" id="mod-comunicados">
         <div class="page-header">
           <div class="page-eyebrow"><i class="far fa-newspaper"></i> Del Estudio</div>
@@ -1866,7 +1816,7 @@ td strong { color: var(--white); font-weight: 500; }
         <div class="comm-grid" id="commList"></div>
       </div>
 
-      <!-- ━━━ CALENDARIO ━━━ -->
+     
       <div class="module" id="mod-calendario">
         <div class="page-header">
           <div class="page-eyebrow"><i class="far fa-calendar-days"></i> Fechas procesales</div>
@@ -1901,7 +1851,7 @@ td strong { color: var(--white); font-weight: 500; }
         </div>
       </div>
 
-      <!-- ━━━ HONORARIOS ━━━ -->
+     
       <div class="module" id="mod-honorarios">
         <div class="page-header">
           <div class="page-eyebrow"><i class="far fa-file-invoice-dollar"></i> Cuenta del cliente</div>
@@ -1909,7 +1859,6 @@ td strong { color: var(--white); font-weight: 500; }
           <p class="page-sub">Estado de su cuenta con el estudio. Para cualquier duda sobre montos o liquidaciones, contacte directamente a su abogado.</p>
         </div>
 
-        <!-- Estado principal -->
         <div class="fee-status-card al-dia">
           <div class="fee-status-indicator"><i class="fas fa-circle-check"></i></div>
           <div>
@@ -1918,7 +1867,7 @@ td strong { color: var(--white); font-weight: 500; }
           </div>
         </div>
 
-        <!-- Cuotas -->
+      
         <div class="section-label">Resumen de cuotas</div>
         <div class="fee-quota-grid">
           <div class="fee-quota-card">
@@ -1938,7 +1887,7 @@ td strong { color: var(--white); font-weight: 500; }
           </div>
         </div>
 
-        <!-- Historial (sin montos) -->
+      
         <div class="section-label">Historial de facturación</div>
         <div class="table-wrap">
           <div style="overflow-x:auto">
@@ -1995,7 +1944,7 @@ td strong { color: var(--white); font-weight: 500; }
         <p style="font-size:.65rem;color:var(--dim);margin-top:10px;line-height:1.55"><i class="fas fa-info-circle" style="margin-right:4px;color:var(--blue-glow);font-size:.6rem"></i>Los montos específicos de honorarios son confidenciales y se comunican exclusivamente por los canales formales del estudio. Para consultas sobre valores, contacte a su abogado.</p>
       </div>
 
-      <!-- ━━━ MI PERFIL ━━━ -->
+    
       <div class="module" id="mod-perfil">
         <div class="page-header">
           <div class="page-eyebrow"><i class="far fa-circle-user"></i> Cuenta</div>
@@ -2073,7 +2022,7 @@ td strong { color: var(--white); font-weight: 500; }
         </div>
       </div>
 
-      <!-- ━━━ SEGURIDAD ━━━ -->
+      
       <div class="module" id="mod-seguridad">
         <div class="page-header">
           <div class="page-eyebrow"><i class="far fa-shield"></i> Configuración</div>
@@ -2118,11 +2067,11 @@ td strong { color: var(--white); font-weight: 500; }
         </div>
       </div>
 
-    </div><!-- /content-area -->
+    </div>
   </main>
-</div><!-- /portalScreen -->
+</div>
 
-<!-- MODAL -->
+
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
   <div class="modal-box" id="modalBox">
     <div class="modal-header">
@@ -2134,17 +2083,15 @@ td strong { color: var(--white); font-weight: 500; }
   </div>
 </div>
 
-<!-- TOASTS -->
+
 <div class="toast-container" id="toastContainer"></div>
 
-<!-- ═══════════════════════════════════════════════
-     JAVASCRIPT
-═══════════════════════════════════════════════════ -->
+
 <script>
 (function () {
   'use strict';
 
-  /* ─── DATA ─── */
+ 
   const CASES = [
     {
       exp: 'EXP-2023-***', tipo: 'Laboral', asunto: 'Despido injustificado y cotizaciones impagas',
@@ -2248,7 +2195,7 @@ td strong { color: var(--white); font-weight: 500; }
   let currentYear  = new Date().getFullYear();
   let captchaVerified = false;
 
-  /* ─── CAPTCHA ─── */
+  
   window.doCaptcha = function () {
     if (captchaVerified) return;
     const wrap = document.getElementById('captchaWrap');
@@ -2262,7 +2209,7 @@ td strong { color: var(--white); font-weight: 500; }
     }, 1200);
   };
 
-  /* ─── LOGIN ─── */
+  
   window.doLogin = function () {
     const email  = document.getElementById('loginEmail').value.trim();
     const pass   = document.getElementById('loginPass').value.trim();
@@ -2304,7 +2251,7 @@ td strong { color: var(--white); font-weight: 500; }
         document.getElementById('loginBtnLabel').textContent = 'Ingresar al Portal';
         errMsg.textContent = 'Credenciales incorrectas. Verifique su correo y contraseña.';
         errEl.classList.add('show');
-        /* Shake animation */
+       
         const box = document.querySelector('.login-box');
         box.style.animation = 'none';
         box.style.transform = 'translateX(-6px)';
@@ -2316,14 +2263,14 @@ td strong { color: var(--white); font-weight: 500; }
     }, 1000);
   };
 
-  /* Keyboard enter */
+  
   ['loginEmail','loginPass'].forEach(id => {
     document.getElementById(id).addEventListener('keypress', e => {
       if (e.key === 'Enter') doLogin();
     });
   });
 
-  /* Eye toggle */
+ 
   document.getElementById('eyeToggle').addEventListener('click', () => {
     const inp  = document.getElementById('loginPass');
     const icon = document.querySelector('#eyeToggle i');
@@ -2336,7 +2283,7 @@ td strong { color: var(--white); font-weight: 500; }
     }
   });
 
-  /* ─── LOGOUT ─── */
+ 
   window.doLogout = function () {
     const ps = document.getElementById('portalScreen');
     ps.style.transition = 'opacity .25s';
@@ -2353,7 +2300,7 @@ td strong { color: var(--white); font-weight: 500; }
       document.getElementById('loginError').classList.remove('show');
       document.getElementById('loginBtn').disabled = false;
       document.getElementById('loginBtnLabel').textContent = 'Ingresar al Portal';
-      /* Reset captcha */
+      
       captchaVerified = false;
       const cw = document.getElementById('captchaWrap');
       cw.classList.remove('verified','loading');
@@ -2362,7 +2309,7 @@ td strong { color: var(--white); font-weight: 500; }
     }, 250);
   };
 
-  /* ─── INIT PORTAL ─── */
+  
   function initPortal () {
     const d = new Date();
     document.getElementById('todayDate').textContent =
@@ -2373,7 +2320,7 @@ td strong { color: var(--white); font-weight: 500; }
     renderCalendar();
   }
 
-  /* ─── NAVIGATION ─── */
+  
   window.navItem = function (moduleId) {
     return document.querySelector(`.nav-item[data-module="${moduleId}"]`);
   };
@@ -2395,7 +2342,7 @@ td strong { color: var(--white); font-weight: 500; }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  /* ─── SIDEBAR ─── */
+  
   window.toggleSidebar = function () {
     const sb = document.getElementById('sidebar');
     const ov = document.getElementById('sidebarOverlay');
@@ -2413,7 +2360,7 @@ td strong { color: var(--white); font-weight: 500; }
     document.getElementById('sidebarOverlay').classList.remove('show');
   };
 
-  /* ─── CASES ─── */
+ 
   function renderCases () {
     const grid = document.getElementById('caseGrid');
     if (!grid) return;
@@ -2481,7 +2428,7 @@ td strong { color: var(--white); font-weight: 500; }
     openModal();
   };
 
-  /* ─── TICKETS ─── */
+  
   function renderTickets (filter = 'all') {
     const tbody = document.getElementById('ticketTableBody');
     if (!tbody) return;
@@ -2584,7 +2531,7 @@ td strong { color: var(--white); font-weight: 500; }
     showToast('Comentario enviado correctamente.', 'success');
   };
 
-  /* ─── SUBMIT TICKET ─── */
+  
   window.submitTicket = function () {
     const tipo  = document.getElementById('ticketTipo').value;
     const asunto = document.getElementById('ticketAsunto').value.trim();
@@ -2641,7 +2588,7 @@ td strong { color: var(--white); font-weight: 500; }
     input.value = '';
   };
 
-  /* ─── COMMUNICADOS ─── */
+ 
   function renderComms () {
     const list = document.getElementById('commList');
     if (!list) return;
@@ -2678,7 +2625,7 @@ td strong { color: var(--white); font-weight: 500; }
     openModal();
   };
 
-  /* ─── CALENDAR ─── */
+  
   function renderCalendar () {
     const calTitle = document.getElementById('calTitle');
     if (!calTitle) return;
@@ -2769,14 +2716,14 @@ td strong { color: var(--white); font-weight: 500; }
     openModal();
   }
 
-  /* ─── MODAL ─── */
+  
   function openModal () { document.getElementById('modalOverlay').classList.add('open'); }
   window.closeModal = function () { document.getElementById('modalOverlay').classList.remove('open'); };
   window.closeModalOutside = function (e) {
     if (e.target === document.getElementById('modalOverlay')) closeModal();
   };
 
-  /* ─── NOTIFICATIONS ─── */
+  
   window.toggleNotifPanel = function () {
     const p = document.getElementById('notifPanel');
     p.classList.toggle('open');
@@ -2797,7 +2744,7 @@ td strong { color: var(--white); font-weight: 500; }
     showToast('Notificaciones marcadas como leídas.', 'info');
   };
 
-  /* ─── SECURITY ─── */
+ 
   window.changePassword = function () {
     const p1 = document.getElementById('secPass1').value;
     const p2 = document.getElementById('secPass2').value;
@@ -2809,7 +2756,7 @@ td strong { color: var(--white); font-weight: 500; }
     showToast('Contraseña actualizada correctamente.', 'success');
   };
 
-  /* ─── HELP CENTER ─── */
+
   window.openHelpCenter = function () {
     document.getElementById('modalTitle').textContent = 'Centro de Ayuda';
     document.getElementById('modalBody').innerHTML = `
@@ -2838,7 +2785,7 @@ td strong { color: var(--white); font-weight: 500; }
     openModal();
   };
 
-  /* ─── TOASTS ─── */
+ 
   window.showToast = function (msg, type = 'info') {
     const icons = { success: 'fa-check', error: 'fa-times', info: 'fa-info', warning: 'fa-exclamation' };
     const container = document.getElementById('toastContainer');
